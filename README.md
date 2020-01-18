@@ -42,7 +42,7 @@ Type: Lazy
 
 #### Parameters
 
-- `factory`  
+-   `factory`  
 
 #### Examples
 
