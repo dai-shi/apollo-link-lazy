@@ -5,7 +5,7 @@ const { DIR, EXT = 'ts' } = process.env;
 
 module.exports = {
   mode: 'development',
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: `./examples/${DIR}/src/index.${EXT}`,
   plugins: [
     new HtmlWebpackPlugin({
@@ -14,27 +14,16 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.jsx?$/,
+      test: /\.[jt]sx?$/,
       exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/preset-env', {
-              useBuiltIns: 'usage',
-              corejs: 3,
-            }],
-            '@babel/preset-react',
-          ],
-        },
-      }],
+      loader: 'ts-loader',
+      options: {
+        transpileOnly: true,
+      },
     }, {
       test: /\.mjs/,
       include: /node_modules/,
       type: 'javascript/auto',
-    }, {
-      test: /\.tsx?$/,
-      loader: 'ts-loader',
     }],
   },
   resolve: {

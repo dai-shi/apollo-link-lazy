@@ -8,7 +8,6 @@
     "apollo-client": "latest",
     "apollo-link-lazy": "latest",
     "apollo-link-schema": "latest",
-    "core-js": "latest",
     "graphql": "latest",
     "graphql-tag": "latest",
     "graphql-tools": "latest",
