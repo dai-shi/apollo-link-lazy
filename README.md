@@ -1,8 +1,8 @@
 # apollo-link-lazy
 
-[![Build Status](https://travis-ci.com/dai-shi/apollo-link-lazy.svg?branch=master)](https://travis-ci.com/dai-shi/apollo-link-lazy)
-[![npm version](https://badge.fury.io/js/apollo-link-lazy.svg)](https://badge.fury.io/js/apollo-link-lazy)
-[![bundle size](https://badgen.net/bundlephobia/minzip/apollo-link-lazy)](https://bundlephobia.com/result?p=apollo-link-lazy)
+[![CI](https://img.shields.io/github/workflow/status/dai-shi/apollo-link-lazy/CI)](https://github.com/dai-shi/apollo-link-lazy/actions?query=workflow%3ACI)
+[![npm](https://img.shields.io/npm/v/apollo-link-lazy)](https://www.npmjs.com/package/apollo-link-lazy)
+[![size](https://img.shields.io/bundlephobia/minzip/apollo-link-lazy)](https://bundlephobia.com/result?p=apollo-link-lazy)
 
 Apollo Link for lazy loading
 
