@@ -3,7 +3,7 @@ import {
   fromPromise,
   toPromise,
   Observable,
-} from 'apollo-link';
+} from '@apollo/client';
 
 type Lazy = (factory: () => Promise<ApolloLink | { default: ApolloLink }>) => ApolloLink;
 

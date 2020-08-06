@@ -3,14 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/react-hooks": "latest",
-    "apollo-cache-inmemory": "latest",
-    "apollo-client": "latest",
-    "apollo-link-lazy": "latest",
-    "apollo-link-schema": "latest",
-    "graphql": "latest",
-    "graphql-tag": "latest",
-    "graphql-tools": "latest",
+    "@apollo/client": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest"

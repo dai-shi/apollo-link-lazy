@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ApolloClient from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloProvider, useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+} from '@apollo/client';
 import { lazy } from 'apollo-link-lazy';
 
 const client = new ApolloClient({

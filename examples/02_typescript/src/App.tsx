@@ -1,8 +1,10 @@
 import React from 'react';
 
-import ApolloClient from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from '@apollo/react-hooks';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from '@apollo/client';
 import { lazy } from 'apollo-link-lazy';
 
 import PostList from './PostList';
