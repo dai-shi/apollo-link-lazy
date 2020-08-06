@@ -7,6 +7,9 @@ module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: `./examples/${DIR}/src/index.${EXT}`,
+  output: {
+    publicPath: '/',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: `./examples/${DIR}/public/index.html`,
@@ -20,14 +23,10 @@ module.exports = {
       options: {
         transpileOnly: true,
       },
-    }, {
-      test: /\.mjs/,
-      include: /node_modules/,
-      type: 'javascript/auto',
     }],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       'apollo-link-lazy': `${__dirname}/src`,
     },
@@ -35,5 +34,6 @@ module.exports = {
   devServer: {
     port: process.env.PORT || '8080',
     contentBase: `./examples/${DIR}/public`,
+    historyApiFallback: true,
   },
 };
