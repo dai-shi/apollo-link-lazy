@@ -1,5 +1,6 @@
 import { SchemaLink } from '@apollo/client/link/schema';
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema } from '@graphql-tools/schema';
+import { addMocksToSchema } from '@graphql-tools/mock';
 
 const typeDefs = `
 type Query {
@@ -22,7 +23,7 @@ const posts = [{
   text: 'This is the second',
 }];
 
-const resolvers = {
+const mocks = {
   Mutation: () => ({
     addPost: (_root, { text }) => posts.push({
       text,
@@ -34,6 +35,7 @@ const resolvers = {
   }),
 };
 
-const schema = makeExecutableSchema({ typeDefs, resolvers });
+const schema = makeExecutableSchema({ typeDefs });
+addMocksToSchema({ mocks, schema });
 
 export default new SchemaLink({ schema });
