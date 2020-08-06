@@ -23,10 +23,14 @@ module.exports = {
       options: {
         transpileOnly: true,
       },
+    }, {
+      test: /\.mjs/,
+      include: /node_modules/,
+      type: 'javascript/auto',
     }],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
     alias: {
       'apollo-link-lazy': `${__dirname}/src`,
     },

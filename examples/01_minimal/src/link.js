@@ -4,7 +4,7 @@ import { addMocksToSchema } from '@graphql-tools/mock';
 
 const typeDefs = `
 type Query {
-  posts: [Post]
+  posts: [Post]!
 }
 type Post {
   id: ID!,
