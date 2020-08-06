@@ -1,2 +1,0 @@
-!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports,require("apollo-link")):"function"==typeof define&&define.amd?define(["exports","apollo-link"],o):o((e=e||self).apolloLinkLazy={},e.apolloLink)}(this,function(e,o){e.lazy=function(e){return new o.ApolloLink(function(n,t){return o.fromPromise(e().then(function(e){return o.toPromise((e instanceof o.ApolloLink?e:e.default).request(n,t)||o.Observable.of())}))})}});
-//# sourceMappingURL=index.umd.js.map
