@@ -30,7 +30,7 @@ const posts: Post[] = [{
 
 const mocks: IMocks = {
   Mutation: () => ({
-    addPost: (_root: any, { text }: Post) => posts.push({
+    addPost: (_root: unknown, { text }: Post) => posts.push({
       id: Date.now(),
       text,
     }),
